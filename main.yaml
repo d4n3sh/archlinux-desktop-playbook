@@ -1,0 +1,40 @@
+---
+- hosts: all
+  roles:
+    - kewlfft.aur
+  tasks:
+    - name: Install packages from the official repo
+      community.general.pacman:
+        update_cache: true
+        name:
+          - firefox
+          - ansible
+          - youtube-dl
+          - vagrant
+          - terraform
+          - virtualbox
+          - virtualbox-host-modules-arch
+          - zsh
+          - obs-studio
+          - discord
+          - lazygit
+        state: present
+
+    - name: Install AUR helper paru
+      become_user: danesh
+      aur:
+        use: makepkg
+        name:
+          - paru
+        state: present
+
+    - name: Install packages from the AUR
+      become_user: danesh
+      aur:
+        aur_only: true
+        use: paru
+        name:
+          - visual-studio-code-bin
+          - google-chrome-beta
+          - slack-desktop
+        state: present
