@@ -18,6 +18,18 @@
           - obs-studio
           - discord
           - lazygit
+          - rust
+          - man
+          - tmux
+          - fzf
+          - fwupd
+          - kdenlive
+          - simplescreenrecorder
+          - noto-fonts-emoji
+          - noto-fonts-cjk
+          - ffmpegthumbs
+          - packagekit
+          - packagekit-qt5
         state: present
 
     - name: Install AUR helper paru
@@ -37,4 +49,12 @@
           - visual-studio-code-bin
           - google-chrome-beta
           - slack-desktop
+          - spotify
+          - teams
+          - ttf-meslo-nerd-font-powerlevel10k
         state: present
+
+    - name: Change default shell to zsh
+      ansible.builtin.user:
+        name: danesh
+        shell: /usr/bin/zsh
