@@ -63,3 +63,9 @@
       ansible.builtin.user:
         name: danesh
         shell: /usr/bin/zsh
+
+    - name: Enable TRIM systemd unit
+      ansible.builtin.systemd:
+        name: fstrim.timer
+        enabled: yes
+        state: started
