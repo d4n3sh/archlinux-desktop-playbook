@@ -30,6 +30,10 @@
           - ffmpegthumbs
           - packagekit
           - packagekit-qt5
+          - gnome-keyring
+          - ansible-lint
+          - yamllint
+          - shellcheck
         state: present
 
     - name: Install AUR helper paru
@@ -52,6 +56,7 @@
           - spotify
           - teams
           - ttf-meslo-nerd-font-powerlevel10k
+          - notion-app
         state: present
 
     - name: Change default shell to zsh
