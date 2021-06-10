@@ -1,6 +1,2 @@
 
-roles/kewlfft.aur/library/aur.py
-roles/kewlfft.aur/meta/.galaxy_install_info
-roles/kewlfft.aur/meta/main.yml
-roles/kewlfft.aur/LICENSE
-roles/kewlfft.aur/README.md
+roles/kewlfft.aur/
